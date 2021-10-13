@@ -1,0 +1,75 @@
+<MyLayout>:
+    BoxLayout:
+        orientation : "vertical"
+        size : root.width, root.height
+
+        Label:
+            text : "Encode Decode"
+            font_size : 24
+            bold : True
+            size_hint : (1, 0.4)
+
+        GridLayout:
+            cols : 2
+            rows : 5
+            # size : root.width, root.height
+            spacing : 5
+
+            Label:
+                id : msg_label
+                text : "Message"
+                font_size : 16
+                bold : True
+                size_hint : (1, 0.7)
+
+            TextInput:
+                id : msg_input
+                multiline : False
+                size_hint : (1, 0.7)
+
+            Label:
+                id : key_label
+                text : "Key"
+                font_size : 16
+                bold : True
+                size_hint : (1, 0.7)
+
+            TextInput:
+                id : key_input
+                multiline : False
+                size_hint : (1, 0.7)
+
+            Label:
+                id : mode_label
+                text : "Mode (e-encode, d-decode)"
+                font_size : 16
+                bold : True
+                size_hint : (1, 0.7)
+
+            TextInput:
+                id : mode_input
+                multiline : False
+                size_hint : (1, 0.7)
+
+            Button:
+                text : "Result"
+                font_size : 16
+                on_press : root.result()
+                size_hint : (1, 0.7)
+
+            TextInput:
+                id : result_input
+                multiline : False
+                size_hint : (1, 0.7)
+
+            Button:
+                text : "Reset"
+                font_size : 14
+                on_press : root.reset()
+                size_hint : (1, 0.7)
+
+            Button:
+                text : "Exit"
+                font_size : 14
+                on_press : root.exitb()
+                size_hint : (1, 0.7)
