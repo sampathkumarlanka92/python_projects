@@ -1,0 +1,64 @@
+<MyLayout>:
+    BoxLayout:
+        orientation : "vertical"
+        size : root.width, root.height
+
+        GridLayout:
+
+            cols : 2
+            rows : 4
+
+            padding : 10
+            spacing : 10
+
+            Label:
+                text : "Hours"
+                font_size : 16
+                size_hint : (1, 0.7)
+
+            TextInput:
+                id : hr_input
+                multiline : False
+                size_hint : (1, 0.7)
+
+            Label:
+                text : "Minutes"
+                font_size : 16
+                size_hint : (1, 0.7)
+
+            TextInput:
+                id : min_input
+                multiline : False
+                size_hint : (1, 0.7)
+
+            Label:
+                text : "Seconds"
+                font_size : 16
+                size_hint : (1, 0.7)
+
+            TextInput:
+                id : sec_input
+                multilne : False
+                size_hint : (1, 0.7)
+
+            Button:
+                text : "Reset"
+                font_size : 18
+                on_press : root.reset()
+
+            Button:
+                text : "Exit"
+                font_size : 18
+                on_press : root.exitb()
+
+        Button:
+            text : "Set Alarm"
+            font_size : 18
+            on_press : root.set_alarm()
+            size_hint : (1, 0.2)
+
+        Label:
+            id : update_label
+            text : "Enter Time in 24 Hr Format"
+            font_size : 18
+            size_hint : (1, 0.2)
